@@ -31,6 +31,7 @@ namespace Mirror
     /// <summary>NetworkServer handles remote connections and has a local connection for a local client.</summary>
     public static partial class NetworkServer
     {
+        public static NetworkMode mode = default;
         static bool initialized;
         public static int maxConnections;
 

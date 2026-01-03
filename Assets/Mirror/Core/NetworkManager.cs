@@ -28,6 +28,8 @@ namespace Mirror
         [Tooltip("Multiplayer games should always run in the background so the network doesn't time out.")]
         public bool runInBackground = true;
 
+        public NetworkMode networkMode = default;
+
         [Header("Auto-Start Options")]
 
         /// <summary>Should the server auto-start when 'Server Build' is checked in build settings</summary>
@@ -224,6 +226,8 @@ namespace Mirror
         {
             // Don't allow collision-destroyed second instance to continue.
             if (!InitializeSingleton()) return;
+
+            NetworkServer.mode = networkMode;
 
             // Apply configuration in Awake once already
             ApplyConfiguration();

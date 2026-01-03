@@ -384,7 +384,6 @@ namespace Mirror.SimpleWeb
         {
             server?.ProcessMessageQueue(this);
         }
-
         #endregion
     }
 }
